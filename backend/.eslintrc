@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "overrides": [
+    {
+      "files": ["*"],
+      "rules": {
+        "no-underscore-dangle": "off",
+        "no-unused-vars": ["error", {
+          "argsIgnorePattern": "next"
+        }]
+      }
+    }
+  ]
+}
