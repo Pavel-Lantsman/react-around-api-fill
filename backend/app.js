@@ -29,4 +29,8 @@ mongoose.connect('mongodb://localhost:27017/aroundb')
 
 app.use(routes);
 
-app.listen(PORT);
+// app.listen(PORT);
+
+app.listen(PORT, () => {
+  console.log(`App listening at port ${PORT}`);
+});
