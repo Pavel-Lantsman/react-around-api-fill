@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./common/config');
 const routes = require('./routes');
+const module: mongoose = require("mongoose");
 
 const { DB_ADDRESS, PORT = 3000 } = process.env;
 
@@ -22,7 +23,9 @@ app.options('*', cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(DB_ADDRESS);
+// mongoose.connect(DB_ADDRESS);
+
+mongoose.connect('mongodb://localhost:27017/aroundb')
 
 app.use(routes);
 
