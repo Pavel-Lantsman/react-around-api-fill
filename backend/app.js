@@ -25,7 +25,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // mongoose.connect(DB_ADDRESS);
 
-mongoose.connect('mongodb://localhost:27017/aroundb')
+mongoose.connect('mongodb+srv://PavelLan:Pavel22011978@cluster0.495ruax.mongodb.net/?retryWrites=true&w=majority')
+  .then(() => console.log("MongoDB connected."))
+  .catch(error => console.log(error))
 
 app.use(routes);
 
