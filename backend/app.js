@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./common/config');
 const routes = require('./routes');
-const module: mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const { DB_ADDRESS, PORT = 3000 } = process.env;
 
