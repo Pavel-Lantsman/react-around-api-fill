@@ -5,6 +5,7 @@
       "files": ["*"],
       "rules": {
         "no-underscore-dangle": "off",
+        "linebreak-style":["error", "windows"],
         "no-unused-vars": ["error", {
           "argsIgnorePattern": "next"
         }]

@@ -9,7 +9,6 @@ const mongoose = require('mongoose');
 const config = require('./common/config');
 const routes = require('./routes');
 
-
 const { PORT = 3000 } = process.env;
 
 const app = express();
@@ -24,8 +23,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb+srv://PavelLan:Pavel22011978@cluster0.495ruax.mongodb.net/?retryWrites=true&w=majority')
-  .then(() => console.log("MongoDB connected."))
-  .catch(error => console.log(error))
+  .then(() => console.log('MongoDB connected.'))
+  .catch((error) => console.log(error));
 
 app.use(routes);
 
